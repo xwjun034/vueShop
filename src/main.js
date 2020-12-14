@@ -2,6 +2,13 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+import VueLazyLoad from 'vue-lazyload'; // 图片懒加载
+ Vue.use(VueLazyLoad,{
+     preLoad: 1.3,
+     error:'./assets/images/common/lazyImg.jpg',
+     loading:'./assets/images/common/lazyImg.jpg',
+     attempt: 1
+ })
 
 Vue.config.productionTip = false;
 
