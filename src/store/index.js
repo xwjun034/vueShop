@@ -1,20 +1,13 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import search from './modules/search'
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {
-    count:101
-  },
-  mutations: {
-     add(state){
-       state.count++;
-     },
-     reduce(state){
-       state.count--;
-     }
-  },
-  actions: {},
-  modules: {}
+let store=new Vuex.Store({
+  modules:{
+      search
+  }
 });
+
+export default store;
